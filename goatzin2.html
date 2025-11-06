@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">  
+<head>  
+  <meta charset="utf-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">  
+  <title></title>  
+  <style>  
+    html, body {  
+      width: 100vw;  
+      height: 100vh;  
+      margin: 0;  
+      padding: 0;  
+      background: #fff;  
+      -webkit-user-select: none;  
+      user-select: none;  
+      -webkit-text-size-adjust: 100%;  
+      text-size-adjust: 100%;  
+      font-family: Arial, sans-serif;  
+    }  
+
+    body {  
+      overflow: hidden;  
+      touch-action: none;  
+      -ms-touch-action: none;  
+      overscroll-behavior: none;  
+    }  
+
+    @media (min-width: 1025px) {  
+      body {  
+        overflow-y: auto;  
+        overflow-x: hidden;  
+        touch-action: auto;  
+      }  
+    }  
+
+    .faixa-topo {  
+      width: 100%;  
+      height: 170px;  
+      background-color: #00989A;  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+    }  
+
+    .faixa-topo img {  
+      max-height: 170%;  
+      height: auto;  
+    }  
+
+    @media (max-width: 600px) {  
+      .faixa-topo {  
+        height: 70px;  
+      }  
+    }  
+
+    .texto-abaixo-topo {  
+      margin-top: 20px;  
+      text-align: center;  
+      color: #666;  
+      font-weight: 300;  
+      font-size: 22px;  
+    }  
+
+    @media (max-width: 600px) {  
+      .texto-abaixo-topo {  
+        margin-top: 12px;  
+        font-size: 16px;  
+      }  
+    }  
+
+    .rotulos {  
+      margin-top: 30px;  
+      margin-left: 20px;  
+      color: #333;  
+      font-size: 18px;  
+      line-height: 1.8;  
+      font-weight: bold;  
+    }  
+
+    @media (max-width: 600px) {  
+      .rotulos {  
+        font-size: 14px;  
+        margin-left: 12px;  
+        margin-top: 20px;  
+      }  
+    }  
+
+    .aviso {  
+      text-align: center;  
+      margin: 20px;   
+      color: #000;  
+      font-size: 14px;  
+      font-weight: 300;  
+    }  
+
+    @media (max-width: 600px) {  
+      .aviso {  
+        font-size: 12px;  
+      }  
+    }  
+
+    .faixa-baixo {  
+      width: 100%;  
+      height: 340px;  
+      background-color: #00989A;  
+      position: fixed;  
+      bottom: 0;  
+      left: 0;  
+    }  
+
+    @media (max-width: 600px) {  
+      .faixa-baixo {  
+        height: 140px;  
+      }  
+    }  
+
+    .faixa-baixo-top {  
+      width: 100%;  
+      height: 340px;  
+      background-color: #00989A;  
+      position: fixed;  
+      bottom: 340px;  
+      left: 0;  
+    }  
+
+    @media (max-width: 600px) {  
+      .faixa-baixo-top {  
+        height: 140px;  
+        bottom: 140px;  
+      }  
+    }  
+
+    .whatsapp-btn {  
+      position: fixed;  
+      bottom: 20px;  
+      right: 20px;  
+      display: flex;  
+      align-items: center;  
+      justify-content: space-between;  
+      background: rgba(0, 0, 0, 0.6);  
+      border-radius: 50px;  
+      padding: 15px 20px;  
+      text-decoration: none;  
+      z-index: 2001;  
+      transition: background 0.3s ease;  
+      font-family: Arial, sans-serif;  
+    }  
+
+    .whatsapp-btn span {  
+      color: white;  
+      font-size: 20px;  
+      font-weight: bold;  
+      margin-right: 12px;  
+      white-space: nowrap;  
+    }  
+
+    .whatsapp-btn img {  
+      width: 40px;  
+      height: 40px;  
+    }  
+
+    .whatsapp-btn:hover {  
+      background: rgba(0, 0, 0, 0.8);  
+    }  
+
+    @media (max-width: 600px) {  
+      .whatsapp-btn {  
+        padding: 10px 14px;  
+        border-radius: 40px;  
+      }  
+      .whatsapp-btn span {  
+        font-size: 16px;  
+      }  
+      .whatsapp-btn img {  
+        width: 32px;  
+        height: 32px;  
+      }  
+    }  
+  </style>  
+</head>  
+<body>  
+  <div class="faixa-topo">  
+    <img src="fluentzinho.png" alt="Logo FTEC">  
+  </div>  
+
+  <div class="texto-abaixo-topo">Código MEC Nº 21811</div>  
+
+  <div class="rotulos">  
+    DATA DA EMISSÃO: <span id="data"></span><br>  
+    ALUNO: <span id="aluno"></span><br>  
+    CPF: <span id="cpf"></span><br>  
+    NACIONALIDADE: <span id="nacionalidade"></span><br>  
+    NATURAL: <span id="natural"></span><br>  
+    DATA DE NASCIMENTO: <span id="nascimento"></span><br>  
+    FILIAÇÃO: <span id="filiacao"></span><br>  
+    CURSO: <span id="curso"></span>  
+  </div>  
+
+  <div class="aviso">  
+    Caso acredite que as informações emitidas não coincidem, entre em contato conosco pelo Whatsapp  
+  </div>  
+
+  <div class="faixa-baixo-top"></div>
+  <div class="faixa-baixo"></div>  
+
+  <a href="https://wa.me/5585985256372" target="_blank" class="whatsapp-btn">  
+    <span>Fale Conosco:</span>  
+    <img src="whatsapp.png" alt="WhatsApp">  
+  </a>  
+
+  <script src="preenche2.js"></script>  
+</body>  
+</html>
