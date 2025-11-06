@@ -71,6 +71,7 @@
     .rotulos {  
       margin-top: 30px;  
       margin-left: 20px;  
+      margin-bottom: 400px; /* espaçamento para não ser coberto pela faixa inferior */  
       color: #333;  
       font-size: 18px;  
       line-height: 1.8;  
@@ -82,6 +83,7 @@
         font-size: 14px;  
         margin-left: 12px;  
         margin-top: 20px;  
+        margin-bottom: 180px; /* menor margem no mobile */  
       }  
     }  
 
@@ -111,22 +113,6 @@
     @media (max-width: 600px) {  
       .faixa-baixo {  
         height: 140px;  
-      }  
-    }  
-
-    .faixa-baixo-top {  
-      width: 100%;  
-      height: 340px;  
-      background-color: #00989A;  
-      position: fixed;  
-      bottom: 340px;  
-      left: 0;  
-    }  
-
-    @media (max-width: 600px) {  
-      .faixa-baixo-top {  
-        height: 140px;  
-        bottom: 140px;  
       }  
     }  
 
@@ -200,7 +186,6 @@
     Caso acredite que as informações emitidas não coincidem, entre em contato conosco pelo Whatsapp  
   </div>  
 
-  <div class="faixa-baixo-top"></div>
   <div class="faixa-baixo"></div>  
 
   <a href="https://wa.me/5585985256372" target="_blank" class="whatsapp-btn">  
